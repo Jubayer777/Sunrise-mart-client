@@ -1,4 +1,4 @@
-Sunrise Mart
+Sunrise Mart(Client)
 
 Project name: Sunrise Mart
 
