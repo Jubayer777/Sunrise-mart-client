@@ -6,7 +6,7 @@ const Orders = () => {
     const { name, displayName, email } = loggedInUser;
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://warm-coast-43537.herokuapp.com/orders?email=' + email, {
+        fetch('http://localhost:5000/orders?email=' + email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -15,6 +15,9 @@ const Orders = () => {
         })
         .then(res => res.json())
         .then(data => setOrders(data))
+        .catch((err)=>{
+            console.log(err);
+        })
     }, [email])
 
     return (
